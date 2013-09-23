@@ -1,6 +1,5 @@
 # -*- coding: gbk -*- 
 #!/usr/bin/python  
-import qianfeng
   
 from HTMLParser import HTMLParser
 import urlparse  
@@ -115,7 +114,7 @@ if __name__ == "__main__":
 	
 	playerurl = "http://rockingsoccer.com/zh/soccer/info/player-"
 	lock = threading.Lock() 
-	for i in xrange(1,383545,1):
+	for i in xrange(378000,1,-1):
 		request = urllib2.Request(playerurl+str(i), postData, headers)  
 		try:
 			response = urllib2.urlopen(request)  

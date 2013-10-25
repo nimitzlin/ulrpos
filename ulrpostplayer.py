@@ -45,7 +45,7 @@ class MyHTMLParser(HTMLParser):
 		self.flags[4] = False
 		self.speed = attrs[0][1]
 		
-		f = open('player%d.txt' % self.rangecount, "a+")
+		f = open('player.txt' % self.rangecount, "a+")
 		print "%s 	%s	http://rockingsoccer.com/zh/soccer/info/player-%d 	%s 	%s 	%s 	%s 	 %s" % (
 			self.tid, self.position, self.tid, self.age, self.telent, self.con, self.strong, self.speed)
 		f.writelines("%s 	%s 	http://rockingsoccer.com/zh/soccer/info/player-%d 	 %s 	 %s 	 %s 	 %s 	 %s\r\n"% (
@@ -109,8 +109,8 @@ if __name__ == "__main__":
 	           'Referer' : '******'}  
 	#构造Post数据，从抓大的包里分析得出的。  
 	postData = {'login' : '',  
-	            'username' : 'nimitzlin',
-	            'password' : 'n1111111',
+	            'username' : 'feng',
+	            'password' : 'feng1234',
 	            }  
 	#user_ids=10848; __gads=ID=7012f50ba09270d2:T=1373867581:S=ALNI_Mb7QLucVFU7uvZ9YGa-kcqDI2-gdw; PHPSESSID=1esbiola3bvs0v229j0234au57; __utma=54919592.222325713.1372662639.1379922592.1379988092.320; __utmb=54919592.15.10.1379988092; __utmc=54919592; __utmz=54919592.1372662639.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)  
 	#需要给Post数据编码  
@@ -123,7 +123,7 @@ if __name__ == "__main__":
 
 	playerurl = "http://rockingsoccer.com/zh/soccer/info/player-"
 	lock = threading.Lock() 
-	for i in xrange(1,1 * 5000,1):
+	for i in xrange(362253,1 ,-1):
 		#request = urllib2.Request(playerurl+str(i), {}, headers)  
 		try:
 			response = urllib2.urlopen(playerurl+str(i))  
